@@ -1,0 +1,46 @@
+/* <!-- Write the CSS code for an external style sheet that configures a
+ page background color of #FFF8DC; has a text color of #000099; is in Arial,
+ Helvetica, or a sans-serif font; and has an id called new that is bold and italic.  
+ 
+***** 8 B
+ Create an external style sheet (call it ex8.css) to format as follows: document 
+ back- ground color of white; document text color of #000099; and document font
+ family of Arial, Helvetica, or sans-serif. Hyperlinks should have a background 
+ color of gray (#CCCCCC). <h1> elements should use the Times New Roman font 
+ with black text color. The news class should use red italic text. 
+
+ **** 8 D
+ Change the configuration of the external style sheet (ex8.css) to use a document 
+ background color of black, document text color of white, and <h1> text color of 
+ gray (#CCCCCC). Save the file. Launch a browser, and test the advantage.html page. 
+ Notice how it picks up the new styles from the external style sheet. 
+--> */
+
+body {
+  background-color: black !important;
+  color: white !important;
+  font-family: arial;
+}
+.news {
+  font-style: italic;
+  color: red;
+}
+a {
+  background-color: #cccccc;
+}
+h1 {
+  font-family: "Times New Roman";
+  color: #cccccc;
+}
+header {
+  background-color: #e28c8c;
+  color: #000066;
+}
+footer {
+  font-size: 80%;
+  font-style: italic;
+}
+#new {
+  font-style: italic;
+  font-weight: bold;
+}

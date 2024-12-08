@@ -1,0 +1,34 @@
+/*Create an external style sheet (call it format1.css) to format as
+ follows: document background color of white, document text color of #000099,\
+ and document font family of Arial, Helvetica, or sans-serif. Hyperlinks should 
+ have a background color of gray (#CCCCCC). Configure the h1 selector to use the
+ Times New Roman font with red text color. 
+> */
+
+body {
+  background-color: white !important;
+  color: #000099 !important;
+  font-family: arial;
+}
+a {
+  background-color: #cccccc;
+  color: black;
+  font-family: Helvetica;
+  text-decoration: none;
+}
+h1 {
+  font-family: "Times New Roman";
+  color: red;
+}
+header {
+  background-color: #e28c8c;
+  color: #000066;
+}
+footer {
+  font-size: 80%;
+  font-style: italic;
+}
+#new {
+  font-style: italic;
+  font-weight: bold;
+}

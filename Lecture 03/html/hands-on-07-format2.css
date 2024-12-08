@@ -1,0 +1,39 @@
+/* Create an external style sheet (call it format2.css) to format as
+ follows: document background color of yellow and document text color of 
+ green. Hyperlinks should have a background color of white. Configure the 
+ h1 selector to use the Times New Roman font with white background color and
+ green text color. 
+ */
+
+body {
+  background-color: yellow !important;
+  color: green !important;
+  font-family: arial;
+}
+a {
+  background-color: white;
+  color: black;
+  font-family: Helvetica;
+  text-decoration: none;
+}
+h1 {
+  font-family: "Times New Roman";
+  background-color: white;
+  color: green;
+}
+header {
+  background-color: #e28c8c;
+  color: #000066;
+}
+footer {
+  font-size: 80%;
+  h1 {
+    font-family: "Times New Roman", Times, serif;
+    color: red;
+  }
+  ont-style: italic;
+}
+#new {
+  font-style: italic;
+  font-weight: bold;
+}
