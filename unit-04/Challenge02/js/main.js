@@ -28,7 +28,7 @@ function drawConsolePyramid(height) {
 }
 
 // MAIN
-number = parseInt(prompt("Challenge 01 - Enter a positive integer "));
+number = parseInt(prompt("Challenge 02 - Enter a positive integer "));
 
 while ((isNaN(number) || number <= 1) && number != "x") {
   number = parseInt(prompt("No doofus - Enter a positive integer"));
