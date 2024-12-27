@@ -47,31 +47,39 @@ body {
 }
 
 .superhero-container {
-  column-count: 4;
+  /* column-count: 4; */
   margin: 0;
   /* min-height: 800px; */
   /* border: red solid 1px; */
   padding-top: 20px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
+  /* display: flex; */
+  display: grid;
+  /* grid-template-columns: 260px 260px; */
+  grid-template-rows: auto;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-auto-rows: 100px;
+  gap: 20px; */
+
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: minmax(700px, 700px);
+  gap: 20px;
+
   /* width: 100%;
  */
 }
 
 .superhero-card {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  margin-left: 5px;
+  /* margin-left: 5px; */
   /* flex-basis: 180px; */
 
-  flex-grow: 1;
-  margin-right: 5px;
+  /* flex-grow: 1; */
+  /* margin-right: 5px; */
   /* height: 100%; */
   /* border: red solid 1px; */
   /* min-width: 180px;
   max-width: 250px; */
-  width: 230px;
+  /* width: 230px; */
   /* justify-content: center; */
 }
 h2.superhero-card {
@@ -86,10 +94,10 @@ h2.superhero-card {
   padding-top: 5px;
   /* padding-bottom: 5px; */
   margin-top: -4px;
-  margin-left: 5px;
-  flex-grow: 1;
-  flex: 1 1 auto;
-  width: 230px;
+  /* margin-left: 5px; */
+  /* flex-grow: 1;
+  flex: 1 1 auto; */
+  /* width: 230px; */
   justify-content: space-around;
   /* overflow: hidden !important; */
   max-height: 50px !important;
@@ -106,9 +114,9 @@ p.superhero-card {
   /* padding-top: 15px !important; */
   padding-bottom: 20px;
   /* flex-basis: 180px; */
-  margin-left: 5px;
-  width: 230px;
-  flex-grow: 1;
+  /* margin-left: 5px; */
+  /* width: 230px; */
+  /* flex-grow: 1; */
   justify-content: space-around;
 }
 img.superhero-card {
@@ -116,11 +124,11 @@ img.superhero-card {
   /* width: 100%; */
   height: 300px;
   background-color: #1b4578;
-  /* object-fit: fill;
-  object-position: 0% 5%; */
+  object-fit: cover;
+  object-position: 0% 5%;
   /* flex-basis: 180px; */
-  width: 230px;
-  flex-grow: 1;
+  width: 100%;
+  /* flex-grow: 1; */
   justify-content: space-around;
   /* align-items: center; */
 }
