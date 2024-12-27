@@ -1,0 +1,179 @@
+* {
+  box-sizing: border-box;
+}
+
+header {
+  /* background-color: yellow; */
+  width: 100%;
+}
+
+header img {
+  /* max-height: 100px; */
+  min-width: 100%;
+  object-fit: cover;
+  height: 250px;
+}
+
+header div {
+  background-color: #1b4578;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  /* background-color: #333; */
+  width: "100%";
+}
+
+header div div {
+  float: left;
+  width: 33.33%; /* three boxes (use 25% for four, and 50% for two, etc) */
+  /* border: yellow solid 1px; */
+  text-align: center;
+}
+
+header div a {
+  display: block;
+  padding: 8px;
+  color: white;
+  text-decoration-line: none;
+}
+header div a:hover {
+  background-color: #485c74;
+}
+
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #f1f1f1;
+}
+
+.superhero-container {
+  column-count: 4;
+  margin: 0;
+  /* min-height: 800px; */
+  /* border: red solid 1px; */
+  padding-top: 20px;
+}
+
+.superhero-card {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 0;
+
+  /* height: 100%; */
+  /* border: red solid 1px; */
+}
+h2.superhero-card {
+  text-align: center;
+  font-size: 2em;
+  color: white;
+  /* border: yellow solid 1px; */
+  background-color: #1b4578;
+  /* min-height: 200px; */
+  padding: 0px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: -4px;
+  width: 100%;
+  overflow: hidden !important;
+  max-height: 50px !important;
+}
+p.superhero-card {
+  text-align: left;
+  font-size: 0.9em;
+  color: rgb(81, 81, 81);
+  /* border: yellow solid 1px; */
+  /* min-height: 180px; */
+  break-after: column;
+  break-inside: avoid;
+  padding-top: 15px !important;
+  padding-bottom: 20px;
+}
+
+/* p.superhero-card::first-line {
+  font-size: 0.9em;
+  color: black;
+} */
+
+/* div.superhero-card {
+  font-size: 1em;
+  color: gray;
+  min-height: 300px;
+} */
+
+img.superhero-card {
+  /* max-width: 200px; */
+  width: 100%;
+  height: 300px;
+  background-color: #1b4578;
+  object-fit: contain;
+}
+
+.tables_container {
+  /* border: red solid 1px; */
+  column-count: 2;
+
+  padding-left: 3%;
+  padding-right: 3%;
+  /* min-height: 800px; */
+  /* border: red solid 1px; */
+  /* padding-top: 20px; */
+  width: 100%;
+  break-after: column;
+  break-inside: avoid;
+}
+
+h1.tables_card {
+  text-align: center;
+  font-size: 1em;
+  /* color: white; */
+  /* border: yellow solid 1px; */
+  /* background-color: #1b4578; */
+  /* min-height: 200px; */
+  padding: 0px;
+  width: 100%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+table.tables_card {
+  border: lightgray solid 1px;
+  padding: 0px;
+  width: 100%;
+  /* padding-top: 5px;
+  padding-bottom: 50px; */
+  break-after: column;
+  break-inside: avoid;
+  text-align: left;
+  border-spacing: 0px;
+}
+tr:nth-child(even) {
+  background-color: lightgray;
+}
+
+td {
+  /* border: black solid 1px; */
+  border-top: lightgrey solid 1px;
+  /* border-top: grey solid 1px; */
+  margin: 0px;
+  border-collapse: collapse;
+  padding: 0px;
+}
+
+footer {
+  text-align: center;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: #1b4578;
+  color: white;
+  margin-top: 50px;
+  /* padding-top: 70px; */
+  width: 100%;
+  /* min-height: 70px; */
+  padding: 20px 20px;
+}
+
+footer h2 {
+  font-size: 1em;
+}
+footer h3 {
+  font-size: 0.5em;
+}
