@@ -46,77 +46,56 @@ body {
   background: #f1f1f1;
 }
 
-.superhero-container {
-  /* column-count: 4; */
-  margin: 0;
-  /* min-height: 800px; */
-  /* border: red solid 1px; */
-  padding-top: 20px;
-  /* display: flex; */
-  display: grid;
-  /* grid-template-columns: 260px 260px; */
-  grid-template-rows: auto;
-  /* grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-auto-rows: 100px;
-  gap: 20px; */
-
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-auto-rows: minmax(700px, 700px);
-  gap: 20px;
-
-  /* width: 100%;
+@media screen and (min-width: 900px) {
+  .superhero-container {
+    margin: 0;
+    padding-top: 20px;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* grid-auto-rows: minmax(700px, 700px); */
+    justify-content: space-evenly;
+    gap: 20px;
+    /* grid-template-columns: auto auto auto auto; */
+    /* width: 100%;
  */
+  }
 }
 
+@media screen and (max-width: 899px) {
+  .superhero-container {
+    margin: 0;
+    padding-top: 20px;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
+    /* grid-auto-rows: minmax(700px, 700px); */
+    justify-content: space-evenly;
+    gap: 20px;
+    /* grid-template-columns: auto auto auto auto; */
+    /* width: 100%;
+ */
+  }
+}
 .superhero-card {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  /* margin-left: 5px; */
-  /* flex-basis: 180px; */
-
-  /* flex-grow: 1; */
-  /* margin-right: 5px; */
-  /* height: 100%; */
-  /* border: red solid 1px; */
-  /* min-width: 180px;
-  max-width: 250px; */
-  /* width: 230px; */
-  /* justify-content: center; */
 }
 h2.superhero-card {
   text-align: center;
   font-size: 1.5em;
-
   color: white;
-  /* border: yellow solid 1px; */
   background-color: #1b4578;
-  /* min-height: 200px; */
   padding: 0px;
   padding-top: 5px;
-  /* padding-bottom: 5px; */
   margin-top: -4px;
-  /* margin-left: 5px; */
-  /* flex-grow: 1;
-  flex: 1 1 auto; */
-  /* width: 230px; */
   justify-content: space-around;
-  /* overflow: hidden !important; */
   max-height: 50px !important;
-  /* flex-basis: 180px; */
 }
 p.superhero-card {
   text-align: left;
   font-size: 0.9em;
   color: rgb(81, 81, 81);
-  /* border: yellow solid 1px; */
-  /* min-height: 180px; */
-  /* break-after: column;
-  break-inside: avoid; */
-  /* padding-top: 15px !important; */
   padding-bottom: 20px;
-  /* flex-basis: 180px; */
-  /* margin-left: 5px; */
-  /* width: 230px; */
-  /* flex-grow: 1; */
   justify-content: space-around;
 }
 img.superhero-card {
@@ -132,37 +111,29 @@ img.superhero-card {
   justify-content: space-around;
   /* align-items: center; */
 }
-/* p.superhero-card::first-line {
-  font-size: 0.9em;
-  color: black;
-} */
 
-/* div.superhero-card {
-  font-size: 1em;
-  color: gray;
-  min-height: 300px;
-} */
+@media screen and (min-width: 650px) {
+  .tables_container {
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 2fr;
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+    /* grid-auto-rows: minmax(700px, 700px); */
+    gap: 20px;
+  }
+}
 
-.tables_container {
-  /* border: red solid 1px; */
-  column-count: 2;
-
-  padding-left: 3%;
-  padding-right: 3%;
-  /* min-height: 800px; */
-  /* border: red solid 1px; */
-  /* padding-top: 20px; */
-  width: 100%;
-  /* break-after: column;
-  break-inside: avoid; */
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-
-  align-items: center;
-
-  align-items: center;
-  justify-content: center;
+@media screen and (max-width: 650px) {
+  .tables_container {
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+    /* grid-auto-rows: minmax(700px, 700px); */
+    gap: 20px;
+  }
 }
 
 h1.tables_card {
@@ -173,7 +144,7 @@ h1.tables_card {
   /* background-color: #1b4578; */
   /* min-height: 200px; */
   padding: 0px;
-  width: 100%;
+  /* width: 100%; */
   margin-top: 5px;
   margin-bottom: 5px;
 }
@@ -181,15 +152,9 @@ h1.tables_card {
 table.tables_card {
   border: lightgray solid 1px;
   padding: 0px;
-  /* width: 100%; */
-  /* padding-top: 5px;
-  padding-bottom: 50px; */
-  /* break-after: column;
-  break-inside: avoid; */
+  width: 100%;
   text-align: left;
   border-spacing: 0px;
-  min-width: 250px;
-  flex-grow: 1;
   margin: 10px;
 }
 tr:nth-child(even) {
