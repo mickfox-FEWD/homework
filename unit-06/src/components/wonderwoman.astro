@@ -1,0 +1,20 @@
+---
+import '../styles/dc_comics.css'; 
+import { Image } from 'astro:assets';
+import wonderwoman from "../assets/wonderwoman.png";
+---
+
+<Image
+            src={wonderwoman}
+            alt=""
+            class="superhero-card"
+            style="background-color: #1b4578; break-after: column"
+          />
+          <h2 class="superhero-card">Wonder Woman</h2>
+
+          <p class="superhero-card" style="break-inside: avoid">
+            is Princess Diana of the immortal Amazons from Greek mythology.
+            Wonder Woman has superhuman strength and speed, as well as the
+            trademark bulletproof bracelets, but it’s probably her Golden Lasso
+            of Truth most people really wish they had.
+          </p>

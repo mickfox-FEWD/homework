@@ -1,0 +1,20 @@
+---
+import '../styles/dc_comics.css'; 
+import { Image } from 'astro:assets';
+import superman from "../assets/superman.png";
+
+---
+  <Image
+            src={superman}
+            alt=""
+            class="superhero-card"
+            style="background-color: #1b4578; break-after: column"
+          />
+          <h2 class="superhero-card">Superman</h2>
+          <p class="superhero-card" style="break-inside: avoid">
+            Superman has super strength, speed, flight, invulnerability as well
+            as his renowned X-ray and heat vision. The most powerful being on
+            the planet, his amazing abilities are also a melancholy reminder of
+            how different he is from the people he’s dedicated to protect.
+          </p>
+     

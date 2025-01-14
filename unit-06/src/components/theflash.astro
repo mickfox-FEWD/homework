@@ -1,0 +1,20 @@
+---
+import '../styles/dc_comics.css'; 
+import { Image } from 'astro:assets';
+import theflash from "../assets/theflash.png";
+---
+
+
+<Image 
+            src={theflash}
+            alt="flasher image"
+            class="superhero-card"
+            style="background-color: #1b4578"
+          />
+          <h2 class="superhero-card">The Flash</h2>
+
+          <p class="superhero-card">
+            Able to run at near light-speeds, his powers provide the ultimate
+            caffeine kick: He can run up buildings, move so swiftly he phases
+            through objects, create sonic booms with the snap of his fingers.
+          </p>
