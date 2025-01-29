@@ -4,6 +4,7 @@
 // The generated output should look like that below
 
 let outputCount = 1;
+let outputStr = "";
 
 inputNum = prompt("Enter a number to factorialise?");
 
@@ -22,6 +23,18 @@ for (let i = inputNum; i > 0; i--) {
 
   //console.log("i: " + i + " | Output count: " + outputCount);
   console.log(i + "! = " + outputCount);
+
+  outputStr += i + "! = " + outputCount + "<br>";
+
   outputCount = 1;
 }
-console.log("Output count: " + outputCount);
+//console.log("Output count: " + outputCount);
+
+let updateMeHtml = document.getElementsByClassName("updateMe");
+
+if (updateMeHtml.length > 0) {
+  // Update the first element's innerHTML with the stars
+  updateMeHtml[0].innerHTML = "<p><br>" + outputStr + "</p>";
+} else {
+  console.log("No elements with the class 'starStr' found.");
+}
