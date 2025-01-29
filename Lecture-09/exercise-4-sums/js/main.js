@@ -21,6 +21,7 @@ while (inputString != "-1") {
 }
 console.log(inputArr);
 let countOfInputArr = inputArr.length;
+let inputArrForOutput = inputArr.toString();
 
 while (inputArr.length > 0) {
   //console.log("inputArr.length:" + inputArr.length);
@@ -32,8 +33,10 @@ while (inputArr.length > 0) {
 let outputAvg = outputSum / countOfInputArr;
 
 alert(
-  "The values entered were: " +
-    inputArr +
+  "The values you entered were: " +
+    inputArrForOutput +
+    "\nNumber count: " +
+    countOfInputArr +
     "\nSum: " +
     outputSum +
     "\nAverage: " +
@@ -45,8 +48,10 @@ let updateMeHtml = document.getElementsByClassName("updateMe");
 if (updateMeHtml.length > 0) {
   // Update the first element's innerHTML with the stars
   updateMeHtml[0].innerHTML =
-    "<p>The values entered were: " +
-    inputArr +
+    "<p>The values you entered were: " +
+    inputArrForOutput +
+    "<br>Number count: " +
+    countOfInputArr +
     "<br>Sum = " +
     outputSum +
     "<br> Average = " +
