@@ -3,14 +3,44 @@
 (() => {
   // globals
   const componentCarousel = document.querySelector(".component-carousel");
-  const navigationDots = componentCarousel.querySelectorAll(".navigation-dot");
+
   const navigationButtons = componentCarousel.querySelectorAll(
     ".navigation-buttons > a"
   );
   const slides = document.getElementsByClassName("slide");
 
-  let currentIndex = 0;
+  console.log("componentCarousel " + componentCarousel);
+  // ----------------------------------------------------------------
+  // Add navigation buttons here Ex01-6
+  // The navigation dots are currently hard coded into the html. Change this to generate
+  // .. the navigation dots using JavaScript
+  const navigation_dot_container_ref = document.getElementById(
+    "navigation-dot-container_id"
+  );
+  console.log("navigation_dot_container_ref " + navigation_dot_container_ref);
 
+  let spanStr = "";
+  console.log("slides.length " + slides.length);
+  for (let i = 0; i < slides.length; i++) {
+    spanStr += "<span class='navigation-dot'> </span> ";
+    console.log(i + " | " + spanStr);
+    // if (updateMeHtml.length > 0) {
+    //   updateMeHtml[0].innerHTML = spanStr;
+    // } else {
+    //   console.log(
+    //     "No elements with the class 'navigation-dot-container' found."
+    //   );
+  }
+
+  const newSpan = document.createElement("span");
+  newSpan.innerHTML = spanStr;
+  //newSpan.classList.add("navigation-dot");
+  navigation_dot_container_ref.append(newSpan);
+
+  //----------------------------------------------------------------
+
+  let currentIndex = 0;
+  const navigationDots = componentCarousel.querySelectorAll(".navigation-dot");
   //Initiate moving of slides
   function showSlides(n) {
     let i;
