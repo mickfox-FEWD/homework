@@ -27,7 +27,7 @@ btn2.addEventListener("click", function () {
 
 // Create a new paragraph element and add it to the container
 const para = document.createElement("p");
-para.innerHTML = "This is new a paragraph stolen from w3schools.";
+para.innerHTML = "<br />This is new a paragraph stolen from w3schools.";
 document.getElementById("container").appendChild(para);
 //document.body.appendChild(para);
 

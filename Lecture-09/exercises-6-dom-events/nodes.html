@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>The Element Object</h1>
+    <h2>The nodeType Property</h2>
+
+    <p>Whitespaces between elements are considered text nodes.</p>
+    <!-- My personal comment goes here..  -->
+    <div>Comments are considered comment nodes.</div>
+
+    <p>The node types of the body element's child nodes are:</p>
+    <p id="demo"></p>
+
+    <script>
+      const nodes = document.body.childNodes;
+      let text = "";
+      for (let i = 0; i < nodes.length; i++) {
+        text +=
+          nodes[i].nodeType +
+          " " +
+          nodes[i].nodeName +
+          "       " +
+          nodes[i].nodeValue +
+          "<br>";
+
+        const childNodes = nodes[i].childNodes;
+        for (let j = 0; j < childNodes.length; j++) {
+          text +=
+            "-- " +
+            childNodes[j].nodeType +
+            " " +
+            childNodes[j].nodeName +
+            "       " +
+            childNodes[j].nodeValue +
+            "<br>";
+
+          const child2Nodes = childNodes[j].childNodes;
+          for (let k = 0; k < child2Nodes.length; k++) {
+            text +=
+              "---- " +
+              child2Nodes[k].nodeType +
+              " " +
+              child2Nodes[k].nodeName +
+              "       " +
+              child2Nodes[k].nodeValue +
+              "<br>";
+          }
+        }
+      }
+      document.getElementById("demo").innerHTML = text;
+    </script>
+  </body>
+</html>
