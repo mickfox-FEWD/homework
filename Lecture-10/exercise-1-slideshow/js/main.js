@@ -24,12 +24,6 @@
   for (let i = 0; i < slides.length; i++) {
     spanStr += "<span class='navigation-dot'> </span> ";
     console.log(i + " | " + spanStr);
-    // if (updateMeHtml.length > 0) {
-    //   updateMeHtml[0].innerHTML = spanStr;
-    // } else {
-    //   console.log(
-    //     "No elements with the class 'navigation-dot-container' found."
-    //   );
   }
 
   const newSpan = document.createElement("span");

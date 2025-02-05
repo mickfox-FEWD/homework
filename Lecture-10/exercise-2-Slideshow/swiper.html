@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unit 9 Demo - Swiper</title>
+    <!-- <link rel="stylesheet" href="css/styles.css" /> -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css" /> -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css" />
+  </head>
+  <body>
+    <h1>Unit 9 Demo - Swiper</h1>
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img
+            src="https://cdn.pixabay.com/photo/2015/04/19/08/32/marguerite-729510__480.jpg"
+            alt=""
+          />
+        </div>
+
+        <div class="swiper-slide">
+          <img
+            src="https://cdn.pixabay.com/photo/2014/02/27/16/10/tree-276014_960_720.jpg"
+            alt=""
+          />
+        </div>
+
+        <div class="swiper-slide">
+          <img
+            src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg"
+            alt=""
+          />
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </body>
+  <!-- <script src="https://unpkg.com/swiper/js/swiper.js"></script> -->
+  <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+  <script>
+    const swiper = new Swiper(".swiper", { autoplay: { delay: 2000 } });
+  </script>
+  <!-- <script src="js/main.js" type="module"></script> -->
+</html>
