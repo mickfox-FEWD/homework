@@ -46,6 +46,19 @@
       lightBox.style.display = "none";
       body.style.overflow = "visible";
     });
+
+    //Mick attmpting to get buttons clickable
+    // need to iterate
+    dotList = document.getElementsByClassName("navigation-dot");
+
+    for (let i = 0; i < dotList.length; i++) {
+      // console.log("dotList[i]" + i);
+      dotList[i].addEventListener("click", (event) => {
+        // showImg.src = images[currImage].src;
+        console.log("click on .navigation-dot[" + i + "]");
+        showImage(i);
+      });
+    }
   }
 
   function showImage(imageIndex) {
@@ -62,6 +75,28 @@
   window.addEventListener("load", (event) => {
     init();
   });
+  // ----------------------------------------------------------------
+  // code for buttons taken from Ex01
+
+  const navigation_dot_container_ref = document.getElementById(
+    "navigation-dot-container_id"
+  );
+  //console.log("navigation_dot_container_ref " + navigation_dot_container_ref);
+
+  let spanStr = "";
+  let numImages = document.querySelectorAll(".image-box").length;
+  console.log("numImages " + numImages);
+  for (let i = 0; i < numImages; i++) {
+    spanStr += "<span class='navigation-dot'> </span> ";
+    //console.log(i + " | " + spanStr);
+  }
+
+  const newSpan = document.createElement("span");
+  newSpan.innerHTML = spanStr;
+  //newSpan.classList.add("navigation-dot");
+  navigation_dot_container_ref.append(newSpan);
+
+  // ----------------------------------------------------------------
 })();
 
 // old code
@@ -109,3 +144,65 @@ function showSlide(n) {
   slides[slideIndex - 1].style.display = "block";
   modalPreviews[slideIndex - 1].className += " active";
 }
+
+// here's googles version
+// function showSlide(n) {
+//   let slides = document.getElementsByClassName("slide"); // Assuming this is how you get the slides
+//   let modalPreviews = document.getElementsByClassName("modal-preview");
+
+//   console.log("slides:", slides);
+//   console.log("modalPreviews", modalPreviews);
+
+//   if (slides.length === 0) {
+//     console.error("No slides found");
+//     return;
+//   }
+
+//   if (modalPreviews.length === 0) {
+//     console.error("No modalPreviews found");
+//     return;
+//   }
+
+//   slideIndex = n; // Update the global index
+
+//   if (slideIndex > slides.length) {
+//     slideIndex = 1;
+//   }
+//   if (slideIndex < 1) {
+//     slideIndex = slides.length;
+//   }
+//   console.log("slideIndex", slideIndex);
+
+//   for (let i = 0; i < slides.length; i++) {
+//     if (slides[i].style) {
+//       slides[i].style.display = "none";
+//     } else {
+//       console.error("Slide at index " + i + " doesn't have the style property");
+//     }
+//   }
+//   for (let i = 0; i < modalPreviews.length; i++) {
+//     if (modalPreviews[i].className) {
+//       modalPreviews[i].className = modalPreviews[i].className.replace(
+//         " active",
+//         ""
+//       );
+//     } else {
+//       console.error(
+//         "Modalpreview at index " + i + " doesn't have the className property"
+//       );
+//     }
+//   }
+
+//   // Safely access the elements
+//   if (slides[slideIndex - 1]) {
+//     slides[slideIndex - 1].style.display = "block";
+//   } else {
+//     console.error(`No slide at index ${slideIndex - 1}`);
+//   }
+
+//   if (modalPreviews[slideIndex - 1]) {
+//     modalPreviews[slideIndex - 1].className += " active";
+//   } else {
+//     console.error(`No modalpreview at index ${slideIndex - 1}`);
+//   }
+// }
