@@ -1,0 +1,42 @@
+---
+// Access passed-in component props, like `<X title="Hello, World" />`
+const { imageURL, heading, content } = Astro.props;
+import { Debug } from 'astro:components';
+
+---
+<!-- Your template here! -->
+<div class="card">
+  <div class="">
+    <img class="" src={imageURL} />
+    <p class="overlay-text">{heading}</p>
+  </div>
+  <p>{content}</p>
+</div>
+
+<style>
+  /* card component */
+  .card {
+    flex: 1;
+    padding: 10px;
+
+    img {
+      max-width: 100%;
+      height: 33vw; 
+    }
+    div {
+      background-color: var(--blue);
+    }
+    .overlay-text {
+      color: white;
+      text-align: center;
+      font-size: 2.5rem;
+      padding: 5px;
+      margin-bottom: 15px;
+    }
+    p {
+      line-height: 1.2;
+      font-size: 1.2rem;
+    }
+  }
+
+</style>

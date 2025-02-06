@@ -1,0 +1,36 @@
+---
+// Access passed-in component props, like `<X title="Hello, World" />`
+const { title } = Astro.props;
+---
+<!-- Your template here! -->
+		<!--Footer-->
+		<footer class="footer__main container-fluid navbar navbar-default">
+			<nav class="footer__nav_bottom w-100">
+				<div class="row">
+					<div class="col">
+						<ul class="nav justify-content-center p-3">
+							<li><a class="nav-link" href="#">Terms &amp; Conditions</a></li>
+							<li><a class="nav-link" href="#">Privacy Policy</a></li>
+							<li><a class="nav-link" href="#">Cookie Information</a></li>
+							<li><a class="nav-link" href="#">Cookie Settings</a></li>
+							<li><a class="nav-link" href="#">Community Standards</a></li>
+							<li><a class="nav-link" href="#">Copyright</a></li>
+						</ul>  
+					</div>
+				</div>
+			</nav>
+		</footer>
+
+<style lang="scss">
+	.footer__nav_bottom {
+  	background-color: #f1f1f1;
+		a {
+  		font-size: initial;
+  		color: black;
+  		text-decoration: none;
+			&:hover {
+  			text-decoration: underline;
+			}
+		}
+	}
+</style>

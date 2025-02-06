@@ -1,0 +1,56 @@
+/* card component */
+.card-container {
+
+  >.card {
+    flex: 1;
+    padding: 10px;
+
+    img {
+      max-width: 100%;
+      height: 33vw; 
+    }
+    > div {
+      background-color: $blue;
+    }
+    .overlay-text {
+      color: white;
+      text-align: center;
+      font-size: 2.5rem;
+      padding: 5px;
+      margin-bottom: 15px;
+    }
+    > p {
+      line-height: 1.2;
+      font-size: 1.2rem;
+    }
+  }
+  
+}
+
+@media screen and (max-width: 1024px)  {
+  .card-container {
+    > .card {
+        flex: 50%;
+      img {
+        height: 60vw;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 425px)  {
+  .card-container {
+    > .card {
+        flex: 100%;
+      img {
+        height: unset;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1600px)  {
+  .card-container > .card img {
+      height: 20vw;
+  }
+}

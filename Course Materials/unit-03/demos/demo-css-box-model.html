@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box Model</title>
+  <style>
+    body {
+      background-color: beige;
+    }
+    .container {
+      background-color: aliceblue;
+    }
+    .myClass {
+      margin: 30px auto;
+      background-color: aqua;
+      width: 600px;
+      height: 200px;
+      padding: 10px;
+      border: solid 10px black;
+      border-radius: 10px;
+    }
+    .middleClass {
+      width: 100%; 
+      height: 25px; 
+      margin: 20px auto;
+    }
+    p {
+      font-size: 3rem;
+      text-align: center;
+      vertical-align: middle;
+    }
+
+  </style>
+</head>
+  <body>
+    <div class="container">
+      <div class="myClass" style="box-sizing: content-box;">
+        <p>box-sizing: content-box;</p>
+      </div>
+      <div class="middleClass"></div>
+      <div class="myClass" style="box-sizing: border-box;">
+        <p>box-sizing: border-box;</p>
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- Things to cover in this demo (use the browser inspector)
+
+1 - box-sizing 
+2 - changing individual values of border, padding, margin, border-radius
+3 - margin collapse 
+
+-->

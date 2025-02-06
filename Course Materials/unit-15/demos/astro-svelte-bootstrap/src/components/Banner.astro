@@ -1,0 +1,17 @@
+---
+// Access passed-in component props, like `<X title="Hello, World" />`
+const { imageURL } = Astro.props;
+
+---
+<section class="container-fluid p-0">
+  <!-- <img src="images/banner.jpg" alt="banner image"> -->
+   <div class="ratio ratio-21x9">
+    <img class="img-fluid" src={imageURL} alt="Banner image">
+   </div>
+</section>
+
+<style lang="scss">
+.banner--image {
+    width: 100%;
+}
+</style>

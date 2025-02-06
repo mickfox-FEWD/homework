@@ -1,0 +1,15 @@
+---
+import Banner from '../../components/Banner.astro';
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import FactorialSlider from '../../components/FactorialSlider.astro';
+---
+
+<SiteLayout title="Astro, Swelte, Bootstrap Demo">
+	<Banner imageURL="/images/banner.jpg" />
+		<FactorialSlider min="2" max="18" />
+		<FactorialSlider min="5" max="15" />
+		
+</SiteLayout>
+
+<style>
+</style>

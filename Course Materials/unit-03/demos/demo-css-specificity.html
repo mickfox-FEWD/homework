@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demo - Specificity</title>
+    <style>
+      body {
+        width: 50%;
+        font-size: 3rem;
+        margin-left: 20%;
+      }
+      #demo {color: blue;}
+      .test {color: green;}
+      p {color: red;}
+    </style>
+  </head>
+  <body>
+    <! start with p declaration and add the others to show their effect. Also add !important at the end to show effect -->  
+    <p>Hello World!</p>
+    <p id="demo" class="test" style="color: pink;">Hello World!</p>
+  </body>
+</html>

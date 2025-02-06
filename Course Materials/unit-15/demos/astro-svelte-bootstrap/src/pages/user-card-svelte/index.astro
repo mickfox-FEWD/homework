@@ -1,0 +1,23 @@
+---
+import Banner from '../../components/Banner.astro';
+import CardContainer from '../../components/CardContainer.astro';
+import Card4Col from '../../components/Card4Col.astro';
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import ToDoListAstro from '../../components/ToDoListAstro.astro';
+import UserCard from '../../components/UserCard.svelte';
+---
+
+<SiteLayout title="Astro, Swelte, Bootstrap Demo">
+	<Banner imageURL="/images/banner.jpg" />
+	<div class="container pt-3">
+		<h1>Svelte - User Cards</h1>
+	</div>
+	<CardContainer>
+		<UserCard client:load />
+		<UserCard client:load />
+		<UserCard client:load />
+		<UserCard client:load />
+	</CardContainer>
+</SiteLayout>
+
+<style></style>

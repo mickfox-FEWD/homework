@@ -1,0 +1,49 @@
+---
+import Banner from '../components/Banner.astro';
+import CardContainer from '../components/CardContainer.astro';
+import Card4Col from '../components/Card4Col.astro';
+import SiteLayout from '../layouts/SiteLayout.astro';
+import UserCard from '../components/UserCard.svelte';
+
+---
+
+<SiteLayout title="Astro, Swelte, Bootstrap Demo">
+	<Banner imageURL="/images/banner.jpg" />
+	<CardContainer>
+		<Card4Col
+			imgSrc="https://mdbcdn.b-cdn.net/img/new/standard/nature/184.webp"
+			imgAlt="Factorial Slider"
+			title="Factorial Slider"
+			body="Calculate the factorial of a set of numbers"
+			href="factorial-slider"
+		/>
+		<Card4Col
+			imgSrc="https://mdbcdn.b-cdn.net/img/new/standard/nature/111.webp"
+			imgAlt="To-do List"
+			title="To-do List"
+			body="Some quick example text to build on the card title and make up the bulk of the card's content."
+			href="to-do-list"
+		/>
+		<Card4Col
+			imgSrc="https://mdbcdn.b-cdn.net/img/new/standard/nature/120.webp"
+			imgAlt="Nature"
+			title="Themes"
+			body="Some quick example text to build on the card title and make up the bulk of the card's content."
+			href=""
+		/>
+		<Card4Col
+			imgSrc="https://mdbcdn.b-cdn.net/img/new/standard/nature/125.webp"
+			imgAlt="Nature"
+			title="Community"
+			body="Some quick example text to build on the card title and make up the bulk of the card's content."
+			href=""
+		/>
+	</CardContainer>
+
+	<CardContainer>
+		<UserCard client:load/>
+	</CardContainer>
+
+</SiteLayout>
+
+<style></style>

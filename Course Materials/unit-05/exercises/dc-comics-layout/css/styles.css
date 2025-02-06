@@ -1,0 +1,32 @@
+.links{
+    display:block;
+    text-decoration: none;  
+}
+.dcpic{
+    width:100%;
+    max-height:550px;
+}
+.superheros{
+    height: 400px;
+    
+}
+.herosize{
+    width:50%;
+}
+.footer1{
+    margin-bottom:2%;
+    padding:0.5%;
+    text-align: center;
+}
+.tableh1{
+    text-align: center;
+}
+tr{
+    font-size: larger;
+}
+.table1{
+    padding:5%;
+}
+.cardWord{
+    text-align:center;
+}

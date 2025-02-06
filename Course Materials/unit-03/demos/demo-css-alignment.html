@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS: Alignment</title>
+    <style>
+      /* component align-margin */
+      .align-margin__item_center {
+        margin: auto;
+        width: 60%;
+        border: 3px solid #73AD21;
+        padding: 10px;
+      }
+
+      /* component align-text */
+      .align-text__item_center {
+        text-align: center;
+        border: 3px solid green;
+      }
+
+      /* component align-image */
+      .align-image__item_centre {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      /* component align-absolute-right */
+      .align-absolute-right {
+        min-height: 200px;
+      }
+      .align-absolute-right__item_right {
+        position: absolute;
+        right: 0px;
+        width: 300px;
+        border: 3px solid #73AD21;
+        padding: 10px;
+      }      
+
+      /* component align-float */
+      .align-float__item_right {
+        float: right;
+        width: 300px;
+        border: 3px solid #73AD21;
+        padding: 10px;
+      }
+
+      /* component align-padding */
+      .align-padding__item_center {
+        padding: 70px 0;
+        border: 3px solid green;
+        text-align: center;
+      }
+
+      /* component align-line-height */
+      .align-line-height__item_center {
+        line-height: 200px;
+        height: 200px;
+        border: 3px solid green;
+        text-align: center;
+      }
+      .align-line-height__item_center p {
+        line-height: 1.5;
+        display: inline-block;
+        vertical-align: middle;
+      }
+
+
+      /* component align-trans */
+      .align-trans__item_center { 
+        height: 200px;
+        position: relative;
+        border: 3px solid green; 
+      }
+      .align-trans__item_center p {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- component align-margin -->
+    <section class="align-margin">
+      <h2>Center Align Elements</h2>
+      <p>To horizontally center a block element (like div), use margin: auto;</p>
+      
+      <div class="align-margin__item_center">
+        <p>Hello World!</p>
+      </div>
+    </section>
+
+    <!-- component align-text -->
+    <section class="align-text">
+      <h2>Center Text</h2>
+        <div class="align-text__item_center">
+          <p>This text is centered.</p>
+        </div>
+    </section>
+
+    <!-- component align-image -->
+    <section class="align-image">
+      <h2>Center an Image</h2>
+      <p>To center an image, set left and right margin to auto, and make it into a block element.</p>
+      <img class="align-image__item_centre" src="images/paris.jpg" alt="Paris" style="width:40%">
+    </section>
+
+    <!-- component align-absolute-right -->
+    <section class="align-absolute-right">
+      <h2>Right align with the position property</h2>
+      <p>An example of how to right align elements with the position property:</p>
+      <div class="align-absolute-right__item_right">
+        <p>In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.</p>
+      </div>
+    </section>
+
+    <!-- component align-float -->
+    <section class="align-float">
+      <h2>Right align with the float property</h2>
+      <p>An example of how to right align elements with the float property:</p>
+      <div class="align-float__item_right">
+        <p>In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.</p>
+      </div>
+      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+    </section>
+
+    <!-- component align-padding -->
+    <section class="align-padding">
+      <h2>Center vertically with padding and text-align</h2>
+      <p>In this example, we use padding and text-align to center the div element both vertically and horizontally:</p>
+      <div class="align-padding__item_center">
+        <p>I am vertically centered.</p>
+      </div>
+    </section>
+
+    <!-- component align-line-height -->
+    <section class="align-line-height">
+      <h2>Center with line-height</h2>
+      <p>In this example, we use the line-height property with a value that is equal to the height property to center the div element:</p>
+      <div class="align-line-height__item_center">
+        <p>I am vertically and horizontally centered.</p>
+      </div>
+    </section>
+
+    <!-- component align-trans-->
+    <section class="align-trans">
+      <h2>Center with position and transform</h2>
+      <p>In this example, we use positioning and the transform property to vertically and horizontally center the div element:</p>
+      <div class="align-trans__item_center">
+        <p>I am vertically and horizontally centered.</p>
+      </div>
+    </section>
+  </body>
+</html>

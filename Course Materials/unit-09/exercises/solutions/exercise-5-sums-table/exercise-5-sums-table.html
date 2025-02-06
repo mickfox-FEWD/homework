@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 5 - Sums - using a while loop and table</title>
+  <style>
+    h1 {
+      color: blue;
+      text-align: center;
+    }
+    table {
+      margin: 10px 20px;
+    }
+    table,
+    th,
+    tr,
+    td {
+      border: 1px solid;
+    }
+  </style>
+</head>
+<body>
+  <div id="output-html-container"></div>
+  <script>
+
+    // declare variables
+    const outputHtmlContainer = document.getElementById('output-html-container');
+    let outputHtml = '';
+    let numberCount=0, sumResult=0;
+    let number=0;
+
+    // generate output html
+    outputHtml += '<h1>SUMS Version 2</h1>';
+    outputHtml += '<hr>';
+    outputHtml += 'The numbers you entered were: ';
+    outputHtml += '<table>';
+    outputHtml += '  <thead><tr><th>Count</th><th>Value</th></tr></thead>';
+    outputHtml += '  <tbody>';
+
+    // input
+    while (true) {
+      number = parseFloat(prompt("Enter a positive number. Enter -1 to quit"));
+      if (number == -1) { 
+        break; // break out of while loop if number is -1
+      }
+      sumResult += number;
+      numberCount++;
+      outputHtml += '<tr><td>' + numberCount + '</td><td>' + +number.toFixed(3) + '</td></tr>'; // add to output html
+    }
+
+    // add to output html
+    outputHtml += '</tbody></table>';
+    outputHtml += 'Sum = ' + sumResult.toFixed(3) + '<br>';
+    outputHtml += 'Average = ' + (sumResult/numberCount).toFixed(3);
+
+    // output - update the DOM
+    outputHtmlContainer.innerHTML = outputHtml;
+  </script>  
+</body>
+</html>

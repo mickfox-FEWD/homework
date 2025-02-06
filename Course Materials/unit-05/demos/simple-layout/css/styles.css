@@ -1,0 +1,145 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* header and nav styles */
+
+.header-main,
+.nav-main {
+  background-color: black;
+  color: white;
+}
+.nav-main > ul{
+  float: right;
+}
+.header-logo a,
+.nav-main a {
+  color: white;
+  text-decoration: none;
+}
+
+.header-logo {
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 10px;
+}
+.nav-main ul {
+  margin: 0;
+  padding: 0;
+}
+.nav-main li {
+  display: inline-block;
+  font-size: 1.5rem;
+  padding: 10px;
+}
+.header-main a:hover,
+nav li:hover > a {
+  text-decoration: underline;
+}
+
+/* main content styles */
+
+main li > a {
+  text-decoration: none;
+}
+
+#main-content {
+  min-height: 500px;
+}
+#main-content section {
+  max-width: 1280px;
+  margin: auto;
+}
+#main-content section.banner__image {
+  max-height: 500px;
+  max-width: initial;
+  overflow-y: hidden;
+}
+.banner__image img {
+  width: 100%;
+}
+.banner__image_background {
+  background-image: url(../images/banner.jpg);
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-size: cover;
+  padding-bottom: 51.191969887%;
+}
+
+.content__grid_images .col-25 {
+  position: relative;
+}
+.content__grid_images .col-25 > img {
+  max-width: 100%;
+  padding: 10px;
+}
+.content__grid_images .col-25 > p {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  color: white;
+  font-weight: 600;
+}
+
+/* footer styles */
+
+footer {
+  font-size: initial;
+}
+.footer__main {
+  border-top: 1px solid #babdc2 ;
+}
+.footer__nav_top {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.footer__nav_top .col-25 h4,
+.footer__nav_top .col-25 ul {
+  padding-left: 10px;
+}
+.footer__nav_top .col-25 li {
+  display: block;
+}
+.footer__nav_bottom {
+  background-color: #f1f1f1;
+}
+.footer__nav_bottom ul {
+  text-align: center;
+  padding: 10px;
+}
+.footer__nav_bottom li {
+  display: inline-block;
+  padding: 10px;
+}
+.footer__nav_bottom a {
+  font-size: initial;
+  color: black;
+  text-decoration: none;
+}
+
+/* grid */
+.row {
+  margin: 20px auto;
+}
+.row > .col-50 {
+  width: 49%;
+  display: inline-block;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+.row > .col-50 * {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.row > .col-25 {
+  width: 24%;
+  display: inline-block;
+}
+/* general stuff */
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}

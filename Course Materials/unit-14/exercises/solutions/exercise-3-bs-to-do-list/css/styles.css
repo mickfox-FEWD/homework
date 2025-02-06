@@ -1,0 +1,3 @@
+#to-do-items-container td[data-field] {
+  cursor: pointer;
+}

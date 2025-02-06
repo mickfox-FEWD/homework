@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM - Event handler - random background colours</title>
+</head>
+<body>
+  <button>Change background colour</button>
+
+  <script>
+    function random(number) {
+      return Math.floor(Math.random() * (number + 1));
+    }
+
+    const btn = document.querySelector("button"); // select the button node
+
+    // add event listener to the button node
+    btn.addEventListener("click", (event) => { 
+      console.log("button clicked");
+      console.log(event);
+      // the event handler code will change the background colour of the body element to a random colour  
+      const rndCol = `rgb(${random(255)} ${random(255)} ${random(255)})`;
+      document.body.style.backgroundColor = rndCol; // change background colour of the web page
+    });
+  </script>
+</body>
+</html>

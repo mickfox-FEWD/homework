@@ -1,0 +1,34 @@
+---
+// Access passed-in component props, like `<X title="Hello, World" />`
+const { title } = Astro.props;
+---
+<!-- Your template here! -->
+		<!--Footer-->
+		<footer class="component footer">
+			<p class="student-details">Student Details</p>
+			<p class="">Name: A.N. Other</p>
+			<p class="">Student Number: UCDPA00001234</p>
+		</footer>
+
+/*<style>
+	/* footer component */
+	footer {
+		background-color: var(--blue);
+		color: white;
+		text-align: center;
+		padding: 5px;
+		flex-direction: column;
+
+		.student-details {
+			font-size: 2.2rem;
+			margin-top: 15px;
+			margin-bottom: 5px;
+		}
+
+		p {
+			font-size: 1.3rem;
+		}
+
+	}
+
+</style>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Backgrounds</title>
+  <style>
+    body {
+      /* single image, shorthand */
+      background: #ffffff url("images/img_tree.png") right top no-repeat;
+
+      /* multiple images, shorthand
+      background: url('images/img_tree.png') right top no-repeat, url('images/paper.gif') right top repeat; 
+      */
+
+      /* multiple images, expanded
+      background-image: url('images/img_tree.png'), url("images/paper.gif");
+      background-position-x: right;
+      background-position-y: top;
+      background-size: initial;
+      background-repeat: no-repeat, repeat;
+      background-attachment: initial;
+      background-origin: initial;
+      background-clip: initial;
+      background-color: rgb(255, 255, 255);
+      */
+      margin-right: 200px;
+    }
+    </style>
+  </head>
+  <body>
+    <h1>The background Property</h1>
+    <p>The background property is a shorthand property for specifying all the background properties in one declaration.</p>
+    <p>Here, the background image is only shown once, and it is also positioned in the top-right corner.</p>
+    <p>We have also added a right margin, so that the text will not write over the background image.</p>
+  </body>
+</html>
+
+<!-- 
+Start with background property, 
+then expand list in the inspector,
+then uncomment the expanded list of properties and go thru each in turn
+
+-->

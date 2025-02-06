@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo - Ajax - XMLHttpRequest</title>
+</head>
+<body>
+  <h1>Demo - Ajax - fetch</h1>
+  <p>Open the console in the Dev Tools to see the output</p>
+  <script>
+    const URL = "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json";
+
+    const fetchPromise = fetch(URL);
+    console.log(fetchPromise);
+
+    fetchPromise
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data[0].name);
+      });
+    
+    console.log("Started request…");  
+  </script>  
+</body>
+</html>

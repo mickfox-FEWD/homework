@@ -1,0 +1,103 @@
+---
+interface Props {
+	min: number;
+	max: number;
+}
+
+let { min, max } = Astro.props;
+
+if (!min) {min=1}
+if (!max) {max=20}
+
+---
+
+<section class="container component-factorial py-2">
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+      <h2>Display a range of factorials</h2>
+      <label for="fact">Select a number between {min} and {max}:</label>
+      <input class="form-range" type="range" id="fact" name="fact" min={min} max={max} value="1">
+      <div class="factorial-output-container"></div>      
+    </div>
+  </div>
+</section>
+
+
+<style>
+  .factorial-output-container {
+    min-height: 200px;
+  }
+</style>
+
+<script>
+  class FactorialSlider {
+    componentRoot;
+    factSlider;
+    outputContainer;
+
+    constructor(componentRoot) {
+      this.componentRoot = componentRoot;
+      this.factSlider = this.componentRoot.querySelector('input[name="fact"]');
+      this.outputContainer = this.componentRoot.querySelector('.factorial-output-container');
+      // event handling
+      this.componentRoot.addEventListener("change", this);
+    }
+
+    factorial(number) {
+    
+      // declare variables
+      let outputHtml = "";
+
+      outputHtml = `<p>Factorials up to ${number}: </p>y
+        <table>
+          <thead>
+            <tr>
+              <th>Number</th>
+              <th>Factorial</th>
+            </tr>
+          </thead>
+          <tbody>`;
+      // calculate factorials
+      for (let j=number; j >= 1; j--) { // outer loop
+        outputHtml += `<tr><td>${j}!</td><td>${this.fac(j)}</td></tr>`;
+      }
+      outputHtml += `</tbody>
+        </table>`; 
+      // output factorials
+      this.outputContainer.innerHTML = outputHtml;
+    }
+
+    // calculate factorial for a number
+    fac = (num) => {
+      let fac = 1;
+      for (let i=1; i <= num; i++) {
+        fac *= i;
+      }
+      return fac;
+    }
+
+    handleEvent(event) {
+      console.log("handleEvent");
+      console.log(event);
+      this.factorial(parseInt(event.target.value));
+    }
+  }
+
+  function init() {
+    // Astro only executes the JS for a component once and so we must search for multiple
+    // instances of the component and pass each root element to the class constructor
+    const factorialComponents = document.querySelectorAll(".component-factorial");
+    factorialComponents.forEach((comp => {
+      const factSlider = new FactorialSlider(comp);
+    }));
+  }
+
+  if (document.readyState === "loading") {
+    // Loading hasn't finished yet
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    // `DOMContentLoaded` has already fired
+    init();
+  }
+
+</script>

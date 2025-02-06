@@ -1,0 +1,14 @@
+---
+// Access passed-in component props, like `<X title="Hello, World" />`
+const { imageURL, heading, content } = Astro.props;
+import { Debug } from 'astro:components';
+
+---
+<!-- Your template here! -->
+<div class="card">
+  <div class="">
+    <img class="" src={imageURL} />
+    <p class="overlay-text">{heading}</p>
+  </div>
+  <p>{content}</p>
+</div>

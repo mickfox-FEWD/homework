@@ -1,0 +1,9 @@
+---
+import Card from './Card.astro';
+// Access passed-in component props, like `<X title="Hello, World" />`
+const { title } = Astro.props;
+---
+<!-- Your template here! -->
+<section class="component card-container">
+  <slot />
+</section>  

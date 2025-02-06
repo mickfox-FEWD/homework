@@ -1,0 +1,35 @@
+---
+import Banner from '../../components/Banner.astro';
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import ToDoListSvelte from '../../components/ToDoListSvelte.svelte';
+
+let todos = [
+	 { id: 0, 
+		 title: "Create a Svelte starter app", 
+		 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		 priority: "High", 
+	 },
+	 { id: 1, 
+		 title: "Create your first component", 
+		 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		 priority: "Medium", 
+	 },
+	 { id: 2, 
+		 title: "Complete the rest of the tutorial", 
+		 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+		 priority: "Low", 
+	 }
+ ];
+
+---
+
+<SiteLayout title="Astro, Swelte, Bootstrap Demo">
+	<Banner imageURL="/images/banner.jpg" />
+	<div class="container pt-3">
+		<h1>Svelte - To-Do List</h1>
+	</div>
+	<ToDoListSvelte {todos} client:load />
+</SiteLayout>
+
+<style></style>
+

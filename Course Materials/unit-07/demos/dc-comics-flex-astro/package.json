@@ -1,0 +1,20 @@
+{
+  "name": "dc-comics-flex-astro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf ./node_modules",
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "keywords": ["Astro", "SCSS" ],
+  "author": "James Byrne",
+  "license": "ISC",
+  "dependencies": {
+    "astro": "^4.7.0",
+    "sass": "^1.77.0"
+  }
+}

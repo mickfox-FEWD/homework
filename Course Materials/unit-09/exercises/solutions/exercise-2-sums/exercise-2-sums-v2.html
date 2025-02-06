@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 2 - Sums - version 2 using an array</title>
+  <style>
+    h1 {
+      color: blue;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <div id="output-html-container"></div>
+  <script>
+
+    // declare variables
+    const outputHtmlContainer = document.getElementById('output-html-container');
+    let outputHtml = '';
+    let numberSize=0, sumResult=0;
+
+    // input
+    let numbersAsString = prompt("Enter a series of integers separated by a space, e.g. '1 2 3 4...'");
+
+    let numbers = numbersAsString.split(" "); // split the input string into an array
+
+    numbers.forEach(function(number, index){ // loop over the array
+      const num = parseInt(number);
+      if (!isNaN(num)) {
+        numberSize++;
+        sumResult += num;
+      }
+    });
+
+    // generate output html
+    outputHtml += '<h1>Sums</h1>';
+    outputHtml += 'The values entered were: ';
+    outputHtml += '<br>';
+    outputHtml += 'Sum = ' + sumResult + '<br>';
+    outputHtml += 'Average = ' + sumResult/numberSize;
+
+    // output - update the DOM
+    outputHtmlContainer.innerHTML = outputHtml;
+  </script>  
+</body>
+</html>

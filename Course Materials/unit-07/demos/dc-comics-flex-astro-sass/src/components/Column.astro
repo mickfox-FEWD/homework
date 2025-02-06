@@ -1,0 +1,11 @@
+---
+// Access passed-in component props, like `<X title="Hello, World" />`
+const { columnTitle } = Astro.props;
+import { Debug } from 'astro:components';
+
+---
+<!-- Your template here! -->
+<div class="two-cols">
+  <h1 class="">{columnTitle}</h1>
+  <slot />
+</div>

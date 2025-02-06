@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo - Classes - Colour - Private</title>
+</head>
+<body>
+  <h1>Demo - Classes - Colour - Private</h1>
+  <p>Open the console in the Dev Tools to see the output</p>
+  <script>
+    class Color {
+      #values;
+      constructor(r, g, b) {
+        this.#values = [r, g, b];
+      }
+      getRed() {
+        return this.#values[0];
+      }
+      setRed(value) {
+        if (value < 0 || value > 255) {
+          throw new RangeError("Invalid R value");
+        }
+        this.#values[0] = value;
+      }
+      redDifference(anotherColor) {
+        // #values doesn't necessarily need to be accessed from this:
+        // you can access private fields of other instances belonging
+        // to the same class.
+        return this.#values[0] - anotherColor.#values[0];
+      }
+    }
+
+    const red = new Color(255, 0, 0);
+    const crimson = new Color(220, 20, 60);
+    
+    red.redDifference(crimson); // 35
+    red.setRed(1000); // RangeError: Invalid R value
+
+  </script>  
+</body>
+</html>
