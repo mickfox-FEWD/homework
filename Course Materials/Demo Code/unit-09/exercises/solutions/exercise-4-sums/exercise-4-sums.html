@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 4 - Sums - using a while loop</title>
+  <style>
+    h1 {
+      color: blue;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div id="output-html-container"></div>
+  <script>
+
+    // declare variables
+    const outputHtmlContainer = document.getElementById('output-html-container');
+    let outputHtml = '';
+    let numberCount=0, sumResult=0;
+    let number=0;
+
+    // generate output html
+    outputHtml += '<h1>SUMS Version 2</h1>';
+    outputHtml += 'The values you entered were: ';
+
+    // input
+    while (true) {
+      number = parseInt(prompt("Enter a positive integer. Enter -1 to quit"));
+      if (number == -1) { 
+        break; // break out of while loop if number is -1
+      }
+      outputHtml += number + " "; // add to output html
+
+      sumResult += number;
+      numberCount++;
+    }
+
+    // add to output html
+    outputHtml += '<br>';
+    outputHtml += 'Number Count = ' + numberCount + '<br>';
+    outputHtml += 'Sum = ' + sumResult.toFixed(3) + '<br>';
+    outputHtml += 'Average = ' + (sumResult/numberCount).toFixed(3);
+
+    // output - update the DOM
+    outputHtmlContainer.innerHTML = outputHtml;
+  </script>  
+</body>
+</html>

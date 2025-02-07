@@ -1,0 +1,45 @@
+body {
+	font-family: Arial, sans-serif;
+}
+
+#container {
+	border: 1px solid black;
+	padding: 10px;
+}
+
+p {
+	margin: 0;
+	width: 80%;
+	display: inline-block;
+}
+
+button {
+	background-color: #4CAF50;
+	color: white;
+	padding: 10px;
+	border: none;
+	cursor: pointer;
+	margin-right: 10px;
+}
+p > button {
+	float: inline-end;
+}
+
+button:hover {
+	background-color: #3e8e41;
+}
+
+#para1,#para2 {
+	border: 1px solid blue;
+	padding: 10px;
+}
+
+#btn1,#btn2 {
+	border: 1px solid blue;
+	padding: 10px;
+}
+
+.highlight {
+	color: white;
+	background-color: blue;
+}
