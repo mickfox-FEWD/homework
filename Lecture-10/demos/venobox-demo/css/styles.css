@@ -1,0 +1,15 @@
+.section {
+  padding: 20px 50px;
+}
+.btn {
+  padding: 15px 20px;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+}
+.vimeo {
+  background-color: #0dcaf0;
+}
+.youtube {
+  background-color: #dc3545;
+}

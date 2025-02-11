@@ -13,7 +13,7 @@
       console.log("images.hits: " + images.hits[i]);
       imagesHtml += `<div class="image">
         <a title="Click to see a large version of this image" href="${images.hits[i].largeImageURL}">
-      <img src="${images.hits[i].webformatURL}"> </a>;  
+      <img src="${images.hits[i].webformatURL}"> </a>
       <div class="image-info"><div class="tags">`;
 
       // imagesHtml += '<div class="image">';
