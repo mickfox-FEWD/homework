@@ -194,3 +194,16 @@ form.addEventListener("submit", (event) => {
   document.querySelector("#updateMe").innerHTML =
     "<p><br>" + outputStr + "</p>";
 });
+// Function to get yesterday's date in YYYY-MM-DD format
+function getYesterdayDate() {
+  const today = new Date();
+  const yesterday = new Date(today);
+  yesterday.setDate(today.getDate() - 1); // Subtract one day
+  return yesterday.toISOString().split("T")[0]; // Format as YYYY-MM-DD
+}
+
+// Set the max and value attributes of the input element
+const birthdayInput = document.querySelector("#birthdaytime");
+const yesterdayDate = getYesterdayDate();
+birthdayInput.setAttribute("max", yesterdayDate);
+birthdayInput.setAttribute("value", yesterdayDate);
