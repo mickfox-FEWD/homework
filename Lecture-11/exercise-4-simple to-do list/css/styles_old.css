@@ -1,0 +1,66 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+/* #full_container {
+} */
+
+#dummy_container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: yellow;
+  padding: 10px;
+  min-height: 20px;
+}
+#todolist_container {
+  display: grid;
+  border: red 20px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  min-height: 200px;
+  background-color: dodgerblue;
+}
+.form-container {
+  width: 100%;
+  /* grid-column: 2; */
+  grid-template-columns: 1fr 1fr;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: inline-block; /* Change to inline-block to allow horizontal expansion */
+}
+
+.form-container input[type="text"],
+.form-container textarea,
+.form-container select,
+.form-container div {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; /* Ensure padding and border are included in the width */
+}
+.form-container textarea {
+  resize: both; /* Allow both vertical and horizontal resizing */
+  min-height: 100px;
+  min-width: 100%; /* Start with a reasonable width */
+}
+.form-container input[type="submit"],
+.form-container input[type="button"] {
+  padding: 10px 20px;
+  margin: 10px 5px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.form-container input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+}
+.form-container input[type="button"] {
+  background-color: #f44336;
+  color: white;
+}

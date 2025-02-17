@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Form</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <div>
+      <table id="todolist">
+        <tr>
+          <th class="tablecol">Title</th>
+          <th class="tablecol">Description</th>
+          <th class="tablecol">Priority</th>
+        </tr>
+      </table>
+    </div>
+    <div class="container">
+      <form id="form">
+        <div><label for="title">Title</label></div>
+        <div>
+          <input
+            type="text"
+            id="title"
+            name="title"
+            placeholder="Enter title of item..."
+          />
+        </div>
+
+        <div><label for="description">Description</label></div>
+        <div>
+          <textarea
+            id="description"
+            name="description"
+            placeholder="Description..."
+          ></textarea>
+        </div>
+
+        <div><label for="priority">Priority</label></div>
+        <div>
+          <select id="priority" name="priority">
+            <option value="High">High</option>
+            <option value="Medium">Medium</option>
+            <option value="Low">Low</option>
+          </select>
+        </div>
+
+        <div>
+          <input type="submit" value="Submit" id="submit" />
+          <input type="button" value="Clear" id="clear" />
+        </div>
+      </form>
+    </div>
+    <!-- <div class="container">
+      <form id="form">
+        <div><label for="title">Title</label></div>
+        <div><input
+          type="text"
+          id="title"
+          name="title"
+          placeholder="Enter title of item..."   /></div>
+
+        <div><label for="description" >Description</label></div>
+        
+        <div><textarea
+          id="description"
+          name="description"
+          placeholder="Description..."
+
+        ></textarea></div>
+
+        <div><label for="priority" >Priority</label></div>
+        <div><select id="priority" name="priority" >
+          <option value="High">High</option>
+          <option value="Medium">Medium</option>
+          <option value="Low">Low</option>
+        </select></div>
+
+        <div><input type="submit" value="Submit" id="submit" />
+        <input type="button" value="Clear" id="clear" /></form></div>
+      </form>
+    </div> -->
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
