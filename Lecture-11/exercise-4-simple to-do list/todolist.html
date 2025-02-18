@@ -18,69 +18,47 @@
     </div>
     <div class="container">
       <form id="form">
-        <div><label for="title">Title</label></div>
-        <div>
-          <input
-            type="text"
-            id="title"
-            name="title"
-            placeholder="Enter title of item..."
-          />
+        <div class="row">
+          <div class=".col-25"><label for="title">Title</label></div>
+          <div class=".col-75">
+            <input
+              type="text"
+              id="title"
+              name="title"
+              placeholder="Enter title of item..."
+            />
+          </div>
         </div>
-
-        <div><label for="description">Description</label></div>
-        <div>
-          <textarea
-            id="description"
-            name="description"
-            placeholder="Description..."
-          ></textarea>
+        <div class="row">
+          <div class=".col-25">
+            <label for="description">Description</label>
+          </div>
+          <div class=".col-75">
+            <textarea
+              id="description"
+              name="description"
+              placeholder="Description..."
+            ></textarea>
+          </div>
         </div>
-
-        <div><label for="priority">Priority</label></div>
-        <div>
-          <select id="priority" name="priority">
-            <option value="High">High</option>
-            <option value="Medium">Medium</option>
-            <option value="Low">Low</option>
-          </select>
+        <div class="row">
+          <div class=".col-25"><label for="priority">Priority</label></div>
+          <div class=".col-75">
+            <select id="priority" name="priority">
+              <option value="High">High</option>
+              <option value="Medium">Medium</option>
+              <option value="Low">Low</option>
+            </select>
+          </div>
         </div>
-
-        <div>
-          <input type="submit" value="Submit" id="submit" />
-          <input type="button" value="Clear" id="clear" />
+        <div class="row">
+          <div class=".col-75">
+            <input type="submit" value="Submit" id="submit" />
+            <input type="button" value="Clear" id="clear" />
+          </div>
         </div>
       </form>
     </div>
-    <!-- <div class="container">
-      <form id="form">
-        <div><label for="title">Title</label></div>
-        <div><input
-          type="text"
-          id="title"
-          name="title"
-          placeholder="Enter title of item..."   /></div>
-
-        <div><label for="description" >Description</label></div>
-        
-        <div><textarea
-          id="description"
-          name="description"
-          placeholder="Description..."
-
-        ></textarea></div>
-
-        <div><label for="priority" >Priority</label></div>
-        <div><select id="priority" name="priority" >
-          <option value="High">High</option>
-          <option value="Medium">Medium</option>
-          <option value="Low">Low</option>
-        </select></div>
-
-        <div><input type="submit" value="Submit" id="submit" />
-        <input type="button" value="Clear" id="clear" /></form></div>
-      </form>
-    </div> -->
 
     <script src="js/main.js"></script>
   </body>
