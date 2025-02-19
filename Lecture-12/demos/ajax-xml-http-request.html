@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo - Ajax - XMLHttpRequest</title>
+</head>
+<body>
+  <h1>Demo - Ajax - XMLHttpRequest</h1>
+  <p>Open the console in the Dev Tools to see the output</p>
+  <script>
+    const URL = "https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json";
+    const xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      console.log(this);
+      if (this.readyState == 4 && this.status == 200) {
+        console.log(this.response);
+      } else {
+        
+      }
+    };
+    xhttp.open("GET", URL, true);
+    xhttp.send();
+  </script>
+</body>
+</html>
